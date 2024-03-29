@@ -32,6 +32,7 @@
 int main()
 {
     char ip[MAX_LENGTH];
+    char mask[MAX_LENGTH];
 
     printf("Entrez une adresse IP : ");
     fgets(ip, sizeof(ip), stdin);
@@ -39,11 +40,24 @@ int main()
 
     if (isValidIPAddress(ip))
     {
-        printf("L'adresse IP est au format classique.\n");
+        printf("L'adresse IP est valide.\n");
     }
     else
     {
-        printf("L'adresse IP n'est pas au format classique.\n");
+        printf("L'adresse IP n'est pas valide.\n");
+    }
+
+    printf("Entrez un masque : ");
+    fgets(mask, sizeof(mask), stdin);
+    mask[strcspn(mask, "\n")] = 0;
+
+    if (isValidIPMask(mask))
+    {
+        printf("Le masque est valide.\n");
+    }
+    else
+    {
+        printf("Le masque n'est pas valide.\n");
     }
 
     return 0;
