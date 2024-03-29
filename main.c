@@ -33,10 +33,6 @@ int main()
     fgets(ip, sizeof(ip), stdin);
     ip[strcspn(ip, "\n")] = 0;
 
-    printf("L'adresse IP est : %s\n", ip);
-
-    printf("L'adresse IP : %d\n", isValidIPAddress(ip));
-
     if (isValidIPAddress(ip))
     {
         printf("L'adresse IP est au format classique.\n");

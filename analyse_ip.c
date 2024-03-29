@@ -25,8 +25,6 @@
 #include <ctype.h>
 #include "analyse_ip.h"
 
-#define MAX_LENGTH 15
-
 int isValidIPAddress(char *ip)
 {
     int num, dots = 0;
@@ -62,27 +60,21 @@ int isValidIPAddress(char *ip)
         num = atoi(ptr);
         if (num < 0 || num > 255)
         {
-            printf("5\n");
             return 0;
         }
-
         if (strlen(ptr) > 1 && ptr[0] == '0')
         {
-            printf("6\n");
             return 0;
         }
 
         dots++;
         ptr = strtok(NULL, ".");
     }
-    printf("Dots: %d\n", dots);
+    dots -= 1;
     if (dots != 3)
     {
-        printf("7\n");
         return 0;
     }
-
-    printf("8\n");
     return 1;
 }
 
