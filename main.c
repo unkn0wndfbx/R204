@@ -2,25 +2,21 @@
  *  ASR => 4R2.04                                                              *
  *******************************************************************************
  *                                                                             *
- *  N° de Sujet :                                                              *
+ *  N° de Sujet :     2                                                        *
  *                                                                             *
  *******************************************************************************
  *                                                                             *
- *  Intitulé :                                                                 *
+ *  Intitulé :Analyse d’adresses IP                                            *
  *                                                                             *
  *******************************************************************************
  *                                                                             *
- *  Nom-prénom1 :                                                              *
+ *  Nom-prénom1 :ROS Natalia                                                   *
  *                                                                             *
- *  Nom-prénom2 :                                                              *
- *                                                                             *
- *  Nom-prénom3 :                                                              *
- *                                                                             *
- *  Nom-prénom4 :                                                              *
+ *  Nom-prénom2 :HELBERT Titouan                                               *
  *                                                                             *
  *******************************************************************************
  *                                                                             *
- *  Nom du fichier :                                                           *
+ *  Nom du fichier :SAE2.04                                                    *
  *                                                                             *
  ******************************************************************************/
 
@@ -59,6 +55,14 @@ int main()
     {
         printf("Le masque n'est pas valide.\n");
     }
+
+    // Exemple d'une adresse IP sous forme de tableau de caractères
+    char ip[] = "192.168.1.1";
+
+    // Extraction et affichage des champs de l'adresse IP
+    extractIPAddressFields(ip);
+
+    return 0;
 
     return 0;
 }
