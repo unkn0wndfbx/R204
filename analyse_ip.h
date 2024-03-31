@@ -3,4 +3,4 @@
 int isValidIPAddress(char *ip);
 
 int isValidIPMask(char *mask);
-void extractIPAddressFields(char *ip);
+void extractIPAddress(char *ip);

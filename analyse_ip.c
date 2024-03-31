@@ -24,6 +24,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "analyse_ip.h"
+#include <stdint.h>
 
 int isValidIPAddress(char *ip)
 {
@@ -133,15 +134,10 @@ int isValidIPMask(char *mask)
     return 1;
 }
 
-void extractIPAddressFields(char *ip) {
-    uint8_t octet[4];
-    uint32_t ip_address;
+    void extractIPAddress(char *ip) {
+        uint8_t octet[4];
+        uint32_t ip_address;
 
-    // Convertir la chaîne de caractères en uint32_t
-    sscanf(ip, "%hhu.%hhu.%hhu.%hhu", &octet[0], &octet[1], &octet[2], &octet[3]);
-    ip_address = (octet[0] << 24) | (octet[1] << 16) | (octet[2] << 8) | octet[3];
-
-    // Affichage des octets
-    printf("Adresse IP : %d.%d.%d.%d\n", octet[0], octet[1], octet[2], octet[3]);
-}
-
+        sscanf(ip, "%hhu.%hhu.%hhu.%hhu", &octet[0], &octet[1], &octet[2], &octet[3]);
+        ip_address = (octet[0] << 24) | (octet[1] << 16) | (octet[2] << 8) | octet[3];
+    }

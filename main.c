@@ -56,13 +56,7 @@ int main()
         printf("Le masque n'est pas valide.\n");
     }
 
-    // Exemple d'une adresse IP sous forme de tableau de caractères
-    char ip[] = "192.168.1.1";
-
-    // Extraction et affichage des champs de l'adresse IP
-    extractIPAddressFields(ip);
-
-    return 0;
+    extractIPAddress(ip);
 
     return 0;
 }
